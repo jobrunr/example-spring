@@ -4,7 +4,7 @@ This repository shows an example how you can integrate JobRunr with [spring.io](
 
 ## About this project
 This project exists out of 3 modules:
-- **core**: this project contains [MyService](), a simple spring service with two example methods which you want to run in a backgroundserver  
+- **core**: this project contains [MyService](core/src/main/java/org/jobrunr/examples/services/MyService.java), a simple spring service with two example methods which you want to run in a backgroundserver  
 - **processingapp**: this app is a Spring Console application and runs indefinitely. It polls for new background jobs and processes them when they arrive.  
 - **webapp**: this is a Spring Rest Webapp that enqueues new background jobs. 
 
