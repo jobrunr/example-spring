@@ -10,6 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.sqlite.SQLiteDataSource;
 
+import javax.sql.DataSource;
 import java.nio.file.Paths;
 
 @Configuration
@@ -22,12 +23,17 @@ public class JobRunrStorageConfiguration {
     }
 
     @Bean
-    public StorageProvider storageProvider(JobMapper jobMapper) {
-        final SQLiteDataSource dataSource = new SQLiteDataSource();
-        dataSource.setUrl("jdbc:sqlite:" + Paths.get(System.getProperty("java.io.tmpdir"), "jobrunr.db"));
+    public StorageProvider storageProvider(DataSource dataSource, JobMapper jobMapper) {
         final SqLiteStorageProvider sqLiteStorageProvider = new SqLiteStorageProvider(dataSource);
         sqLiteStorageProvider.setJobMapper(jobMapper);
         return sqLiteStorageProvider;
+    }
+
+    @Bean
+    public SQLiteDataSource dataSource() {
+        final SQLiteDataSource dataSource = new SQLiteDataSource();
+        dataSource.setUrl("jdbc:sqlite:" + Paths.get(System.getProperty("java.io.tmpdir"), "jobrunr.db"));
+        return dataSource;
     }
 
     @Bean
