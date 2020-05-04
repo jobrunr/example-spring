@@ -1,7 +1,6 @@
 package org.jobrunr.examples;
 
 import org.jobrunr.jobs.mappers.JobMapper;
-import org.jobrunr.scheduling.JobScheduler;
 import org.jobrunr.storage.StorageProvider;
 import org.jobrunr.storage.sql.sqlite.SqLiteStorageProvider;
 import org.jobrunr.utils.mapper.jackson.JacksonJsonMapper;
@@ -16,11 +15,6 @@ import java.nio.file.Paths;
 @Configuration
 @ComponentScan(basePackageClasses = JobRunrStorageConfiguration.class)
 public class JobRunrStorageConfiguration {
-
-    @Bean
-    public JobScheduler jobScheduler(StorageProvider storageProvider) {
-        return new JobScheduler(storageProvider);
-    }
 
     @Bean
     public StorageProvider storageProvider(DataSource dataSource, JobMapper jobMapper) {
