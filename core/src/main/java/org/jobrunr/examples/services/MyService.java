@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
  * This is a simple spring service
  */
 @Component
-public class MyService {
+public class MyService implements MyServiceInterface {
 
     public void doSimpleJob(String anArgument) {
         System.out.println("Doing some work: " + anArgument);

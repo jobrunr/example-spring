@@ -1,5 +1,5 @@
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter:2.2.6.RELEASE'
-    implementation 'org.jobrunr:jobrunr:0.9.4'
+    implementation 'org.jobrunr:jobrunr:0.9.5'
     implementation 'org.xerial:sqlite-jdbc:3.30.1'
 }
