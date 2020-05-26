@@ -4,6 +4,7 @@ import org.jobrunr.dashboard.JobRunrDashboardWebServer;
 import org.jobrunr.examples.JobRunrStorageConfiguration;
 import org.jobrunr.server.BackgroundJobServer;
 import org.jobrunr.server.JobActivator;
+import org.jobrunr.server.jmx.JobRunrJMXExtensions;
 import org.jobrunr.storage.StorageProvider;
 import org.jobrunr.utils.mapper.JsonMapper;
 import org.springframework.boot.CommandLineRunner;
@@ -36,6 +37,11 @@ public class JobServerApplication implements CommandLineRunner {
         final BackgroundJobServer backgroundJobServer = new BackgroundJobServer(storageProvider, jobActivator);
         backgroundJobServer.start();
         return backgroundJobServer;
+    }
+
+    @Bean
+    public JobRunrJMXExtensions jobRunrJMXExtensions(BackgroundJobServer backgroundJobServer, StorageProvider storageProvider) {
+        return new JobRunrJMXExtensions(backgroundJobServer, storageProvider);
     }
 
     @Bean
