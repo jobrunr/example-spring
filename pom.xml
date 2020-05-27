@@ -32,13 +32,6 @@
         <java.version>11</java.version>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>jcenter</id>
-            <url>https://jcenter.bintray.com/</url>
-        </repository>
-    </repositories>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -60,7 +53,7 @@
             <dependency>
                 <groupId>org.jobrunr</groupId>
                 <artifactId>jobrunr</artifactId>
-                <version>0.9.6</version>
+                <version>0.9.7</version>
             </dependency>
             <dependency>
                 <groupId>org.xerial</groupId>
