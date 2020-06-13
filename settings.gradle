@@ -1,5 +1,5 @@
 rootProject.name = 'examples'
 include ':core'
 include ':webapp'
-include 'processingapp'
+include ':processingapp'
 

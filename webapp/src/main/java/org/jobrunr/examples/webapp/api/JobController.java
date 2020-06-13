@@ -2,6 +2,7 @@ package org.jobrunr.examples.webapp.api;
 
 import org.jobrunr.examples.services.MyService;
 import org.jobrunr.examples.services.MyServiceInterface;
+import org.jobrunr.jobs.context.JobContext;
 import org.jobrunr.scheduling.JobScheduler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -35,6 +36,13 @@ public class JobController {
     @GetMapping("/long-running-job")
     public JobResponse longRunningJob(@RequestParam(value = "name", defaultValue = "World") String name) {
         jobScheduler.<MyService>enqueue(myService -> myService.doLongRunningJob("Hello " + name));
+
+        return new JobResponse("Job Enqueued");
+    }
+
+    @GetMapping("/long-running-job-with-job-context")
+    public JobResponse longRunningJobWithJobContext(@RequestParam(value = "name", defaultValue = "World") String name) {
+        jobScheduler.<MyService>enqueue(myService -> myService.doLongRunningJobWithJobContext("Hello " + name, JobContext.Null));
 
         return new JobResponse("Job Enqueued");
     }

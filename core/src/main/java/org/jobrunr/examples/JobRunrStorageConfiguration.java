@@ -26,7 +26,7 @@ public class JobRunrStorageConfiguration {
     @Bean
     public SQLiteDataSource dataSource() {
         final SQLiteDataSource dataSource = new SQLiteDataSource();
-        dataSource.setUrl("jdbc:sqlite:" + Paths.get(System.getProperty("java.io.tmpdir"), "jobrunr.db"));
+        dataSource.setUrl("jdbc:sqlite:" + Paths.get(System.getProperty("java.io.tmpdir"), "jobrunr-example.db"));
         return dataSource;
     }
 
