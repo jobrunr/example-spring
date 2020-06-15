@@ -53,7 +53,7 @@
             <dependency>
                 <groupId>org.jobrunr</groupId>
                 <artifactId>jobrunr</artifactId>
-                <version>0.9.8</version>
+                <version>0.9.9</version>
             </dependency>
             <dependency>
                 <groupId>org.xerial</groupId>
