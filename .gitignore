@@ -151,6 +151,12 @@ gradle-app.setting
 # production
 /core/src/main/resources/org/jobrunr/dashboard/frontend/build
 
+# eclipse stuff
+.classpath
+.project
+.settings
+target/
+
 # misc
 .DS_Store
 .env.development
