@@ -10,7 +10,7 @@ dependencies {
     api platform('org.springframework.boot:spring-boot-dependencies:2.2.6.RELEASE')
 
     constraints {
-        api 'org.jobrunr:jobrunr:0.9.10'
+        api 'org.jobrunr:jobrunr:0.9.11'
         api 'org.xerial:sqlite-jdbc:3.30.1'
     }
 }
