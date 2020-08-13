@@ -29,7 +29,9 @@ public class JobServerApplication implements CommandLineRunner {
 
     @Bean
     public JobRunrDashboardWebServer dashboardWebServer(StorageProvider storageProvider, JsonMapper jsonMapper) {
-        return new JobRunrDashboardWebServer(storageProvider, jsonMapper);
+        final JobRunrDashboardWebServer jobRunrDashboardWebServer = new JobRunrDashboardWebServer(storageProvider, jsonMapper);
+        jobRunrDashboardWebServer.start();
+        return jobRunrDashboardWebServer;
     }
 
     @Bean
