@@ -6,6 +6,6 @@ dependencies {
     implementation platform(project(':'))
     implementation project(':core')
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.jobrunr:jobrunr'
+    implementation 'org.jobrunr:jobrunr-spring-boot-starter'
     implementation 'org.xerial:sqlite-jdbc'
 }
