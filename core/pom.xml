@@ -16,7 +16,7 @@
         </dependency>
         <dependency>
             <groupId>org.jobrunr</groupId>
-            <artifactId>jobrunr</artifactId>
+            <artifactId>jobrunr-spring-boot-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>org.xerial</groupId>
