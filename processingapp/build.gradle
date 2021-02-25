@@ -14,5 +14,5 @@ dependencies {
 }
 
 springBoot {
-    mainClassName = 'org.jobrunr.examples.WebApplication'
+    mainClassName = 'org.jobrunr.examples.processingapp.JobServerApplication'
 }
