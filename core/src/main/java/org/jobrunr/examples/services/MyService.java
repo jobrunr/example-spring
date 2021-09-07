@@ -1,8 +1,10 @@
 package org.jobrunr.examples.services;
 
+import org.jobrunr.jobs.annotations.Job;
 import org.jobrunr.jobs.context.JobContext;
 import org.jobrunr.jobs.context.JobDashboardProgressBar;
 import org.jobrunr.jobs.context.JobRunrDashboardLogger;
+import org.jobrunr.spring.annotations.Recurring;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -14,6 +16,12 @@ import org.springframework.stereotype.Component;
 public class MyService implements MyServiceInterface {
 
     private static final Logger LOGGER = new JobRunrDashboardLogger(LoggerFactory.getLogger(MyService.class));
+
+    @Recurring(id = "my-recurring-job", cron = "0 0/15 * * *")
+    @Job(name = "My recurring job")
+    public void doRecurringJob() {
+        System.out.println("Doing some work without arguments");
+    }
 
     public void doSimpleJob(String anArgument) {
         System.out.println("Doing some work: " + anArgument);

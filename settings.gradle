@@ -1,4 +1,4 @@
-rootProject.name = 'examples'
+rootProject.name="example-jobrunr-spring"
 include ':core'
 include ':webapp'
 include ':processingapp'
