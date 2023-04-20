@@ -7,8 +7,8 @@ dependencies {
 
     implementation project(':core')
     implementation 'org.springframework.boot:spring-boot-starter'
-    implementation 'org.jobrunr:jobrunr-spring-boot-starter'
-    implementation 'org.xerial:sqlite-jdbc'
+    implementation 'org.jobrunr:jobrunr-spring-boot-2-starter'
+    implementation 'com.h2database:h2'
     implementation 'com.fasterxml.jackson.core:jackson-databind'
     implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
 }

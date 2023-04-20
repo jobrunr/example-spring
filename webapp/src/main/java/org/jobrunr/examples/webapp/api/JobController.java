@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.Duration;
+import java.util.UUID;
 
 import static java.time.Instant.now;
 
@@ -70,5 +71,11 @@ public class JobController {
     public String longRunningJobWithJobContext(@RequestParam(value = "name", defaultValue = "World") String name) {
         final JobId enqueuedJobId = jobScheduler.<MyService>enqueue(myService -> myService.doLongRunningJobWithJobContext("Hello " + name, JobContext.Null));
         return "Job Enqueued: " + enqueuedJobId;
+    }
+
+    @GetMapping(value = "/delete-job", produces = {MediaType.TEXT_PLAIN_VALUE})
+    public String deleteJob(@RequestParam(value = "jobId") UUID jobId) {
+        jobScheduler.delete(jobId);
+        return "Job Deleted: " + jobId;
     }
 }
