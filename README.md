@@ -11,7 +11,7 @@ This project exists out of 3 modules:
   and processes them when they arrive. It contains only a two classes:
   - the [JobServerApplication](processingapp/src/main/java/org/jobrunr/examples/processingapp/JobServerApplication.java) which is empty 🙂
   - the [JobServerConfiguration](processingapp/src/main/java/org/jobrunr/examples/processingapp/JobServerConfiguration.java) which starts the H2 Database (in server mode) and contains the database information
-  > the thing to note here is the `[application.properties](processingapp/src/main/resources/application.properties)` where the server and the dashboard are enabled
+  > the thing to note here is the [`application.properties`](processingapp/src/main/resources/application.properties) where the server and the dashboard are enabled
 - **webapp**: this is a Spring Rest Webapp that enqueues new background jobs. It contains a simple `RestController`
   called [JobController](webapp/src/main/java/org/jobrunr/examples/webapp/api/JobController.java) which contains some
   methods (= endpoints) to enqueue jobs.
