@@ -16,7 +16,7 @@
         </dependency>
         <dependency>
             <groupId>org.jobrunr</groupId>
-            <artifactId>jobrunr-spring-boot-2-starter</artifactId>
+            <artifactId>jobrunr-spring-boot-3-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
