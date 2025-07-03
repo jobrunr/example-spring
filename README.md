@@ -4,6 +4,8 @@ This repository shows an advanced example how you can integrate JobRunr with [sp
 
 An easier example using [spring.io](https://spring.io/) can be found [here](https://github.com/jobrunr/example-java-mag)
 
+> If you are interested in running Spring Boot with Kotlin and kotlinx-serialization-json, please take a look at our other example reposiotry at https://github.com/jobrunr/example-spring-kotlin instead.
+
 ## About this project
 This project exists out of 3 modules:
 - **core**: this project contains [MyService](core/src/main/java/org/jobrunr/examples/services/MyService.java), a simple spring service with two example methods which you want to run in a backgroundserver.  
