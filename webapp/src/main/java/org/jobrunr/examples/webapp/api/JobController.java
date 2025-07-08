@@ -1,5 +1,6 @@
 package org.jobrunr.examples.webapp.api;
 
+import org.jobrunr.examples.services.MyAsyncService;
 import org.jobrunr.examples.services.MyService;
 import org.jobrunr.examples.services.MyServiceInterface;
 import org.jobrunr.jobs.JobId;
@@ -22,10 +23,12 @@ public class JobController {
 
     private final JobScheduler jobScheduler;
     private final MyServiceInterface myService;
+    private final MyAsyncService myAsyncService;
 
-    public JobController(JobScheduler jobScheduler, MyServiceInterface myService) {
+    public JobController(JobScheduler jobScheduler, MyServiceInterface myService, MyAsyncService myAsyncService) {
         this.jobScheduler = jobScheduler;
         this.myService = myService;
+        this.myAsyncService = myAsyncService;
     }
 
     @GetMapping(produces = {MediaType.TEXT_HTML_VALUE})
@@ -34,6 +37,7 @@ public class JobController {
                 Hello World from JobController!<br />\
                 You can:<br />\
                 - <a href="/jobs/simple-job">Enqueue a simple job</a><br />\
+                - <a href="/jobs/simple-job-async">Enqueue a simple job using the new @AyncJob annotation in JobRunr v8</a><br />\
                 - <a href="/jobs/simple-job-instance">Enqueue a simple job using a service instance</a><br />\
                 - <a href="/jobs/schedule-simple-job">Schedule a simple job 3 hours from now using a service instance</a><br />\
                 - <a href="/jobs/long-running-job">Enqueue a long-running job</a><br />\
@@ -47,6 +51,12 @@ public class JobController {
     public String simpleJob(@RequestParam(defaultValue = "World") String name) {
         final JobId enqueuedJobId = jobScheduler.<MyService>enqueue(myService -> myService.doSimpleJob("Hello " + name));
         return "Job Enqueued: " + enqueuedJobId;
+    }
+
+    @GetMapping(value = "/simple-job-async", produces = {MediaType.TEXT_PLAIN_VALUE})
+    public String simpleJobAsync(@RequestParam(defaultValue = "World") String name) {
+        myAsyncService.simpleAsyncJob();
+        return "Automagically created job by calling simpleAsyncJob() - Go to http://localhost:8000/dashboard to inspect the job.";
     }
 
     @GetMapping(value = "/simple-job-instance", produces = {MediaType.TEXT_PLAIN_VALUE})
