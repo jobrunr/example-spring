@@ -1,11 +1,12 @@
 plugins {
-    id 'org.springframework.boot' version '3.1.1'
+    id 'org.springframework.boot' version '4.0.0'
 }
 
 dependencies {
     implementation platform(project(':'))
     implementation project(':core')
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.jobrunr:jobrunr-spring-boot-3-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.jobrunr:jobrunr-spring-boot-4-starter'
     implementation 'com.h2database:h2'
 }
