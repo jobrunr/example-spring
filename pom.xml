@@ -25,7 +25,7 @@
     </modules>
 
     <properties>
-        <jobrunr.version>8.0.0</jobrunr.version>
+        <jobrunr.version>8.3.0</jobrunr.version>
 
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>

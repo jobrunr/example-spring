@@ -25,7 +25,7 @@ This project exists out of 3 modules:
     in the `processingapp` module and also keep it running
 - Run the main method from the [WebApplication](webapp/src/main/java/org/jobrunr/examples/webapp/WebApplication.java) in the `webapp` module and keep it running
 - Open your favorite browser:
-  - Navigate to the JobRunr dashboard located at http://localhost:8000/dashboard. This is running within
+  - Navigate to the JobRunr dashboard located at [http://localhost:8000/dashboard](http://localhost:8000/dashboard). This is running within
     the [JobServerApplication](processingapp/src/main/java/org/jobrunr/examples/processingapp/JobServerApplication.java).
   - To enqueue a simple job, open a new tab and go to http://localhost:8080/jobs/ and take it from there.
   - Visit the dashboard again and see the jobs being processed!

@@ -7,10 +7,10 @@ javaPlatform {
 }
 
 dependencies {
-    api platform('org.springframework.boot:spring-boot-dependencies:3.3.0')
+    api platform('org.springframework.boot:spring-boot-dependencies:3.5.8')
 
     constraints {
-        api 'org.jobrunr:jobrunr-spring-boot-3-starter:7.2.0'
+        api 'org.jobrunr:jobrunr-spring-boot-3-starter:8.3.0'
     }
 }
 
