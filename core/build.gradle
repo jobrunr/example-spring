@@ -6,7 +6,7 @@ dependencies {
     implementation platform(project(':'))
 
     implementation 'org.springframework.boot:spring-boot-starter'
-    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-jackson'
     implementation 'org.jobrunr:jobrunr-spring-boot-4-starter'
     implementation 'com.h2database:h2'
 }
