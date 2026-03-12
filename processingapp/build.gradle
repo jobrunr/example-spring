@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '3.1.1'
+    id 'org.springframework.boot' version '4.0.3'
 }
 
 dependencies {
@@ -7,10 +7,9 @@ dependencies {
 
     implementation project(':core')
     implementation 'org.springframework.boot:spring-boot-starter'
-    implementation 'org.jobrunr:jobrunr-spring-boot-3-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+    implementation 'org.jobrunr:jobrunr-spring-boot-4-starter'
     implementation 'com.h2database:h2'
-    implementation 'com.fasterxml.jackson.core:jackson-databind'
-    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
 }
 
 springBoot {

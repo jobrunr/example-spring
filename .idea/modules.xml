@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/webapp/example-jobrunr-spring.webapp.main.iml" filepath="$PROJECT_DIR$/.idea/modules/webapp/example-jobrunr-spring.webapp.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/example-spring.iml" filepath="$PROJECT_DIR$/.idea/example-spring.iml" />
     </modules>
   </component>

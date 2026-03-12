@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <annotationProcessing>
-      <profile name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="spring-example-webapp" />
-        <module name="spring-example-processingapp" />
-        <module name="spring-example-core" />
-      </profile>
-    </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="example-jobrunr-spring.core" target="17" />
-      <module name="example-jobrunr-spring.processingapp" target="17" />
-      <module name="example-jobrunr-spring.webapp" target="17" />
+      <module name="example-spring-core" target="17" />
+      <module name="example-spring-processingapp" target="17" />
+      <module name="example-spring-webapp" target="17" />
       <module name="examples.main" target="1.8" />
       <module name="examples.test" target="1.8" />
+      <module name="spring-example" target="17" />
+      <module name="spring-example-core" target="17" />
+      <module name="spring-example-processingapp" target="17" />
+      <module name="spring-example-webapp" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="example-jobrunr-spring.core" options="-parameters" />
+      <module name="example-jobrunr-spring.core.main" options="-parameters" />
+      <module name="example-jobrunr-spring.core.test" options="-parameters" />
       <module name="example-jobrunr-spring.processingapp" options="-parameters" />
       <module name="example-jobrunr-spring.processingapp.main" options="-parameters" />
       <module name="example-jobrunr-spring.processingapp.test" options="-parameters" />
       <module name="example-jobrunr-spring.webapp" options="-parameters" />
       <module name="example-jobrunr-spring.webapp.main" options="-parameters" />
       <module name="example-jobrunr-spring.webapp.test" options="-parameters" />
+      <module name="example-spring-core" options="-parameters" />
+      <module name="example-spring-processingapp" options="-parameters" />
+      <module name="example-spring-webapp" options="-parameters" />
       <module name="spring-example-core" options="-parameters" />
       <module name="spring-example-processingapp" options="-parameters" />
       <module name="spring-example-webapp" options="-parameters" />

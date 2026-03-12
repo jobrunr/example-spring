@@ -7,10 +7,10 @@ javaPlatform {
 }
 
 dependencies {
-    api platform('org.springframework.boot:spring-boot-dependencies:3.5.8')
+    api platform('org.springframework.boot:spring-boot-dependencies:4.0.3')
 
     constraints {
-        api 'org.jobrunr:jobrunr-spring-boot-3-starter:8.3.0'
+        api 'org.jobrunr:jobrunr-spring-boot-4-starter:8.5.0'
     }
 }
 
@@ -22,8 +22,10 @@ configure(subprojects.findAll {it.name != 'platform'}) {
     group = 'org.jobrunr.examples'
     version = '1.0'
 
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    java {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
 
     repositories {
         mavenLocal()

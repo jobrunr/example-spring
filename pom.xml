@@ -8,13 +8,13 @@
 
     <packaging>pom</packaging>
 
-    <name>jobrunr-spring-example</name>
+    <name>jobrunr-example-spring</name>
     <description>JobRunr Spring Example</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.5.0</version>
+        <version>4.0.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -25,7 +25,7 @@
     </modules>
 
     <properties>
-        <jobrunr.version>8.3.0</jobrunr.version>
+        <jobrunr.version>8.5.0</jobrunr.version>
 
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -38,7 +38,7 @@
         <dependencies>
             <dependency>
                 <groupId>org.jobrunr.examples</groupId>
-                <artifactId>spring-example-core</artifactId>
+                <artifactId>example-spring-core</artifactId>
                 <version>${project.parent.version}</version>
             </dependency>
             <dependency>
@@ -48,13 +48,12 @@
             </dependency>
             <dependency>
                 <groupId>org.jobrunr.examples</groupId>
-                <artifactId>spring-example-webapp</artifactId>
+                <artifactId>example-spring-webapp</artifactId>
                 <version>${project.parent.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.jobrunr</groupId>
-                <artifactId>jobrunr-spring-boot-3-starter</artifactId>
+                <artifactId>jobrunr-spring-boot-4-starter</artifactId>
                 <version>${jobrunr.version}</version>
             </dependency>
         </dependencies>

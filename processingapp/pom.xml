@@ -7,12 +7,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-example-processingapp</artifactId>
+    <artifactId>example-spring-processingapp</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>org.jobrunr.examples</groupId>
-            <artifactId>spring-example-core</artifactId>
+            <artifactId>example-spring-core</artifactId>
         </dependency>
     </dependencies>
 </project>

@@ -14,9 +14,11 @@ This project exists out of 3 modules:
   - the [JobServerApplication](processingapp/src/main/java/org/jobrunr/examples/processingapp/JobServerApplication.java) which is empty 🙂
   - the [JobServerConfiguration](processingapp/src/main/java/org/jobrunr/examples/processingapp/JobServerConfiguration.java) which starts the H2 Database (in server mode) and contains the database information
   > the thing to note here is the [`application.properties`](processingapp/src/main/resources/application.properties) where the server and the dashboard are enabled
-- **webapp**: this is a Spring Rest Webapp that enqueues new background jobs. It contains a simple `RestController`
+- **webapp**: this is a Spring Rest Webapp that enqueues new background jobs. It contains a simple `RestController`. This application also exposes the JobRunr Dashboard!
   called [JobController](webapp/src/main/java/org/jobrunr/examples/webapp/api/JobController.java) which contains some
   methods (= endpoints) to enqueue jobs.
+
+⚠️It's important that you first start the `processingapp` and then the `webapp`.
 
 ## How to run this project:
 - clone the project and open it in your favorite IDE that supports gradle
